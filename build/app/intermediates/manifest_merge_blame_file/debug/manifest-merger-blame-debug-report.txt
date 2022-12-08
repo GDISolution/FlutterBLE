@@ -13,35 +13,35 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/Users/seojina/development/flutter_ble/android/app/src/debug/AndroidManifest.xml:7:5-66
-15-->/Users/seojina/development/flutter_ble/android/app/src/debug/AndroidManifest.xml:7:22-64
+15-->/Users/seojina/development/FlutterBLE/android/app/src/debug/AndroidManifest.xml:7:5-66
+15-->/Users/seojina/development/FlutterBLE/android/app/src/debug/AndroidManifest.xml:7:22-64
 16    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-16-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:4:5-76
-16-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:4:22-73
+16-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:4:5-76
+16-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:4:22-73
 17    <uses-permission
-17-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:5:5-73
+17-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:5:5-73
 18        android:name="android.permission.BLUETOOTH_SCAN"
-18-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:5:22-70
+18-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:5:22-70
 19        android:usesPermissionFlags="neverForLocation" />
-19-->[:flutter_blue_plus] /Users/seojina/development/flutter_ble/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:19:9-55
+19-->[:flutter_blue_plus] /Users/seojina/development/FlutterBLE/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:19:9-55
 20    <uses-permission
-20-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:6:5-68
+20-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:6:5-68
 21        android:name="android.permission.BLUETOOTH"
-21-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:6:22-65
+21-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:6:22-65
 22        android:maxSdkVersion="30" />
-22-->[:flutter_blue_plus] /Users/seojina/development/flutter_ble/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:25:9-35
+22-->[:flutter_blue_plus] /Users/seojina/development/FlutterBLE/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:25:9-35
 23    <uses-permission
-23-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:7:5-74
+23-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:7:5-74
 24        android:name="android.permission.BLUETOOTH_ADMIN"
-24-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:7:22-71
+24-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:7:22-71
 25        android:maxSdkVersion="30" />
-25-->[:flutter_blue_plus] /Users/seojina/development/flutter_ble/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-35
+25-->[:flutter_blue_plus] /Users/seojina/development/FlutterBLE/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-35
 26    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-26-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:8:5-81
-26-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:8:22-78
+26-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:8:5-81
+26-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:8:22-78
 27    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-27-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:9:5-79
-27-->/Users/seojina/development/flutter_ble/android/app/src/main/AndroidManifest.xml:9:22-76
+27-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:9:5-79
+27-->/Users/seojina/development/FlutterBLE/android/app/src/main/AndroidManifest.xml:9:22-76
 28
 29    <application
 30        android:name="android.app.Application"
@@ -49,7 +49,7 @@
 31-->[androidx.core:core:1.8.0] /Users/seojina/.gradle/caches/transforms-3/d363e3b5616f580c766e3e2b3c05f27d/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 32        android:debuggable="true"
 33        android:icon="@mipmap/ic_launcher"
-34        android:label="flutter_ble" >
+34        android:label="Bluetooth Low Energy" >
 35        <activity
 36            android:name="com.ble.flutter_ble.MainActivity"
 37            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

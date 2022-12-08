@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/seojina/development/flutter_ble/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml",
+            "outputFile": "/Users/seojina/development/FlutterBLE/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml",
             "map": [
                 {
                     "source": "/Users/seojina/.gradle/caches/transforms-3/ea6751acb56b0b88131e2e20244ba024/transformed/appcompat-1.5.1/res/values-v25/values-v25.xml",

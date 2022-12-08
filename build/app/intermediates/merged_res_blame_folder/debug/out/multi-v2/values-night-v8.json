@@ -1,27 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/seojina/development/flutter_ble/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/seojina/development/FlutterBLE/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
-                {
-                    "source": "/Users/seojina/development/flutter_ble/android/app/src/main/res/values-night/styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "172,817",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "475,981"
-                    },
-                    "to": {
-                        "startLines": "2,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,363",
-                        "endLines": "6,9",
-                        "endColumns": "12,12",
-                        "endOffsets": "358,527"
-                    }
-                },
                 {
                     "source": "/Users/seojina/.gradle/caches/transforms-3/058691aaa87e6066927d1fd34c06f150/transformed/material-1.7.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
@@ -37,6 +18,25 @@
                         "startOffsets": "1164,1239,1350,1439,1540,1647,1754,1853,1956,2044,2168,2270,2372,2488,2590,2704,2832,2948,3070,3206,3326,3460,3580,3692,3907,4024,4148,4278,4400,4538,4672,4788",
                         "endColumns": "74,110,88,100,106,106,98,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
                         "endOffsets": "1234,1345,1434,1535,1642,1749,1848,1951,2039,2163,2265,2367,2483,2585,2699,2827,2943,3065,3201,3321,3455,3575,3687,3813,4019,4143,4273,4395,4533,4667,4783,4903"
+                    }
+                },
+                {
+                    "source": "/Users/seojina/development/FlutterBLE/android/app/src/main/res/values-night/styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "172,817",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "475,981"
+                    },
+                    "to": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,363",
+                        "endLines": "6,9",
+                        "endColumns": "12,12",
+                        "endOffsets": "358,527"
                     }
                 },
                 {
