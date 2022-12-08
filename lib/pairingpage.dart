@@ -69,7 +69,7 @@ class _PairingPageState extends State<PairingPage> {
 
   void scan() async {
     _fBle.connectedDevices.asStream().listen((event) {
-      // print('paired device: $event');
+      print('paired device: $event');
     });
 
     if (await Permission.bluetoothScan.request().isGranted) {}
