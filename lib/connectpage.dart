@@ -125,13 +125,16 @@ class _ConnectPageState extends State<ConnectPage> {
               try {
                 await c.setNotifyValue(true);
                 c.value.listen((value) {
-                  print('notify test ==> ${c.lastValue}: value');
                   setState(() {
                     notifyData = value;
                   });
+
+                  if (value.isNotEmpty) {
+                    showToast('데이터 송신중...');
+                  }
                 });
 
-                await Future.delayed(const Duration(milliseconds: 500));
+                await Future.delayed(const Duration(milliseconds: 100));
               } catch (e) {
                 print('Error ${c.uuid} $e');
               }
@@ -178,7 +181,7 @@ class _ConnectPageState extends State<ConnectPage> {
         properties += 'Read';
       } else if (c.properties.notify) {
         if (notifyData.isNotEmpty) {
-          data = notifyData[1].toInt().toString();
+          data = notifyData[notifyData.length - 1].toInt().toString();
         }
         properties += 'Notify';
       } else {
@@ -208,12 +211,18 @@ class _ConnectPageState extends State<ConnectPage> {
     txt = _textController.text;
 
     if (txt.isEmpty) {
-      Fluttertoast.showToast(
-          msg: '데이터를 입력하세요',
-          toastLength: Toast.LENGTH_SHORT,
-          backgroundColor: Colors.teal.withOpacity(0.3),
-          textColor: Colors.black);
+      showToast('데이터를 입력하세요');
     }
+  }
+
+  void showToast(String message) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      backgroundColor: Colors.teal.withOpacity(0.5),
+      textColor: Colors.black,
+    );
   }
 
   Widget serviceUUID(BluetoothService bs) {
@@ -265,14 +274,15 @@ class _ConnectPageState extends State<ConnectPage> {
               ],
             ),
             Expanded(
-                child: ListView.separated(
-                    itemBuilder: (context, index) {
-                      return listItem(bluetoothService[index]);
-                    },
-                    separatorBuilder: (BuildContext context, int index) {
-                      return Divider();
-                    },
-                    itemCount: bluetoothService.length))
+              child: ListView.separated(
+                  itemBuilder: (context, index) {
+                    return listItem(bluetoothService[index]);
+                  },
+                  separatorBuilder: (BuildContext context, int index) {
+                    return Divider();
+                  },
+                  itemCount: bluetoothService.length),
+            )
           ],
         ),
       ),
@@ -319,6 +329,10 @@ class _ConnectPageState extends State<ConnectPage> {
                         checkTextEmpty();
                         writeData(destBle, sendData);
                         print('Destination = $destUuids');
+
+                        _textController.clear();
+                        showToast("전송 완료!");
+                        Navigator.of(context).pop();
                       },
                       child: Text(
                         '전송',

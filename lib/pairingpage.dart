@@ -232,7 +232,6 @@ class _PairingPageState extends State<PairingPage> {
         child: ListView.separated(
           itemBuilder: (context, index) {
             return itemList(scanResult[index]);
-            // return itemList(scanResult[index]);
           },
           separatorBuilder: (BuildContext context, int index) {
             return Divider();
