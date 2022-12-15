@@ -38,6 +38,7 @@ class _BlePairedPageState extends State<BlePairedPage> {
           bondedDevice.add(element);
         });
       }
+      print('페어드기기 ==> ${bondedDevice[0].id.id}');
     });
   }
 

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ble/temp/testpage.dart';
+import 'package:flutter_ble/refernce/testpage.dart';
+import 'package:flutter_ble/temp/animatedpage.dart';
 
 import 'blepairedpage.dart';
+import 'mainpage.dart';
 import 'pairingpage.dart';
 
 void main() {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const FunList(),
+      home: MainPage(),
     );
   }
 }
@@ -34,49 +36,6 @@ class FunList extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: [
-            /*
-            ListTile(
-              title: Text(
-                "01 Bluetooth LE Page",
-                style: TextStyle(fontSize: 25),
-              ),
-              onTap:
-                  () => /*Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => BlePage()))*/
-                      {},
-            ),
-            ListTile(
-              title: Text(
-                "02 Bluetooth LE PairingPage",
-                style: TextStyle(fontSize: 25),
-              ),
-              onTap: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => PairingPage())),
-            ),
-            ListTile(
-              title: Text(
-                "03 BluetoothPage",
-                style: TextStyle(fontSize: 25),
-              ),
-              onTap: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => BluetoothPage())),
-            ),
-            ListTile(
-              title: Text(
-                "04 Ble Paired Page",
-                style: TextStyle(fontSize: 25),
-              ),
-              onTap: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => BlePairedPage())),
-            ),
-            ListTile(
-              title: Text(
-                "04 Ble Paired Page",
-                style: TextStyle(fontSize: 25),
-              ),
-              onTap: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => BlePairedPage())),
-            ),*/
             ListTile(
               title: Text(
                 "01 페어링 & 연결",
@@ -86,8 +45,8 @@ class FunList extends StatelessWidget {
                 ),
               ),
               subtitle: Text('PairingPage'),
-              onTap: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => PairingPage())),
+              onTap: () =>
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => PairingPage())),
             ),
             ListTile(
               title: Text(
@@ -98,8 +57,8 @@ class FunList extends StatelessWidget {
                 ),
               ),
               subtitle: Text('BlePairedPage'),
-              onTap: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => BlePairedPage())),
+              onTap: () =>
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => BlePairedPage())),
             ),
             ListTile(
               title: Text(
@@ -110,8 +69,7 @@ class FunList extends StatelessWidget {
                 ),
               ),
               subtitle: Text('TestPage'),
-              onTap: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => TestPage())),
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => MainPage())),
             ),
           ],
         ),

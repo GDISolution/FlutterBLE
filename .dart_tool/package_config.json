@@ -117,7 +117,7 @@
     },
     {
       "name": "fluttertoast",
-      "rootUri": "file:///Users/seojina/development/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.1",
+      "rootUri": "file:///Users/seojina/development/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -356,7 +356,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-12-13T05:47:17.096960Z",
+  "generated": "2022-12-14T02:12:27.214106Z",
   "generator": "pub",
   "generatorVersion": "2.18.5"
 }

@@ -30,6 +30,8 @@ class _ConnectPageState extends State<ConnectPage> {
 
   final _textController = TextEditingController();
 
+  late FocusNode focusNode;
+
   String destUuids = '';
   String sendData = 'hello';
   String sampleUuid = '0000fff2-0000-1000-8000-00805f9b34fb';
@@ -39,6 +41,8 @@ class _ConnectPageState extends State<ConnectPage> {
   @override
   void initState() {
     super.initState();
+
+    focusNode = FocusNode();
 
     _stateListener = widget.device.state.listen((event) {
       debugPrint('event: $event');
@@ -58,6 +62,8 @@ class _ConnectPageState extends State<ConnectPage> {
     super.dispose();
 
     _stateListener?.cancel();
+
+    focusNode.dispose();
 
     disconnect();
   }
@@ -169,7 +175,7 @@ class _ConnectPageState extends State<ConnectPage> {
 
     for (BluetoothCharacteristic c in bs.characteristics) {
       properties = '';
-      name += '\t\t${c.uuid}\n';
+      name += '\t\t[characteristicUUID]\n \t${c.uuid}\n';
 
       if (c.properties.write) {
         if (c.uuid.toString() == sampleUuid) {
@@ -187,10 +193,10 @@ class _ConnectPageState extends State<ConnectPage> {
       } else {
         properties += 'Etc';
       }
-      name += '\t\t\t\tProperties: $properties\n';
+      name += '\t\t\t\u25CF Properties: $properties\n';
 
       if (data.isNotEmpty) {
-        name += '\t\t\t\tdata: $data\n';
+        name += '\t\t\t\t\t\t\u002D data: $data\n';
       }
     }
 
@@ -226,8 +232,8 @@ class _ConnectPageState extends State<ConnectPage> {
   }
 
   Widget serviceUUID(BluetoothService bs) {
-    String name = '';
-    name = bs.uuid.toString();
+    String name = '[serviceUUID]';
+    name += '\n${bs.uuid.toString()}';
     return Text(
       name,
       style: TextStyle(fontWeight: FontWeight.bold),
@@ -289,6 +295,7 @@ class _ConnectPageState extends State<ConnectPage> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.grey,
         onPressed: () {
+          focusNode.requestFocus();
           showDialog(
               context: context,
               barrierDismissible: false,
@@ -303,6 +310,7 @@ class _ConnectPageState extends State<ConnectPage> {
                     ),
                   ),
                   content: TextField(
+                    autofocus: true,
                     style: TextStyle(
                       color: Colors.white,
                     ),
